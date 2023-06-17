@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/border_top_f3f5f9"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:src="@drawable/_1"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_gravity="center"
+            android:scaleType="fitStart" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Баварские колбаски"
+                android:id="@+id/txt_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/_222831"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="8dp"
+                android:text="Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус"
+                android:textColor="@color/_AAAAAD"
+                android:textSize="14sp" />
+
+            <Button
+                style="@style/OutlinedButtonMenu"
+                android:id="@+id/btn_action"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="от 345 р"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

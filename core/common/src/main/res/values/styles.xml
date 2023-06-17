@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ChipMenu" parent="Widget.Material3.Chip.Suggestion.Elevated">
+        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipMinHeight">35dp</item>
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="OutlinedButtonMenu" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="rippleColor">?colorControlHighlight</item>
+        <item name="cornerRadius">6dp</item>
+        <item name="strokeColor">@color/_FD3A69</item>
+        <item name="android:textColor">@color/_FD3A69</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+</resources>

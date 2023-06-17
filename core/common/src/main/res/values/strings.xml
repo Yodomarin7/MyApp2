@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu">Меню</string>
+    <string name="profile">Профиль</string>
+    <string name="bag">Корзина</string>
+
+    <string name="all_menu">Всё меню</string>
+    <string name="salads">Салаты</string>
+    <string name="with_rice">С рисом</string>
+    <string name="with_fish">С рыбой</string>
+
+    <string name="error">Ошибка, попробуйте ещё раз</string>
+    <string name="again">Ещё раз</string>
+</resources>

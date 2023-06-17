@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_graph"
+    app:startDestination="@id/frgMenu">
+
+    <fragment
+        android:id="@+id/frgMenu"
+        android:name="nebur.menu.ui.MenuFrg"
+        android:label="fragment_menu_frg"
+        tools:layout="@layout/frg_menu" />
+</navigation>

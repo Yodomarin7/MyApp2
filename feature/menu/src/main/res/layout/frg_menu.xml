@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.MenuFrg">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Москва"
+                android:textColor="@color/_222831" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="0dp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_down" />
+
+            <Space
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/qr" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:liftOnScroll="true"
+                app:liftOnScrollColor="@color/_FBFBFB">
+
+                <HorizontalScrollView
+                    app:layout_scrollFlags="scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="112dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rectangle_38" />
+
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="112dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rectangle_39" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="8dp"
+                    android:scrollbars="none">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chip_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        app:selectionRequired="true"
+                        app:singleLine="true"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_all"
+                            style="@style/ChipMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/all_menu" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_salad"
+                            style="@style/ChipMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/salads" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_rice"
+                            style="@style/ChipMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/with_rice" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_fish"
+                            style="@style/ChipMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/with_fish" />
+
+                    </com.google.android.material.chip.ChipGroup>
+                </HorizontalScrollView>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <FrameLayout
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/waitP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <include android:id="@+id/wait"
+                        layout="@layout/page_wait"/>
+                </androidx.core.widget.NestedScrollView>
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/errorP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <include android:id="@+id/error"
+                        layout="@layout/page_error"/>
+                </androidx.core.widget.NestedScrollView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" />
+
+                <FrameLayout
+                    android:id="@+id/shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@drawable/shadow"/>
+
+            </FrameLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
